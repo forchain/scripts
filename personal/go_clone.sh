@@ -13,7 +13,7 @@ path=~/${url}
 if [ -d ${path} ]; then
     git -C ${path} pull
 else
-    git clone https://${url} ${path}
+    git clone https://${url} ${path} --depth=1
 fi
 
 ln -s ${path} ${GOPATH}/src/${url}
